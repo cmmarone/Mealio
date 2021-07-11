@@ -10,6 +10,7 @@ namespace Mealio.Services
     {
         private readonly ApplicationDbContext _context;
         private readonly Guid _userId;
+
         public MealPlanService(ApplicationDbContext context, Guid userId)
         {
             _context = context;

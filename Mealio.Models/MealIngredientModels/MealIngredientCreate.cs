@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Mealio.Models.MealIngredientModels
 {
-    class MealIngredientCreate
+    public class MealIngredientCreate
     {
         [Required]
         public string Ingredient { get; set; }

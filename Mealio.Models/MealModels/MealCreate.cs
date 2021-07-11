@@ -16,5 +16,7 @@ namespace Mealio.Models.MealModels
         public string MealPlan { get; set; }
         [Required]
         public int PlanDayIndex { get; set; }
+
+        // CookingInstructions added after adding meal ingredients
     }
 }

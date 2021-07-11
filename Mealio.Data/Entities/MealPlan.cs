@@ -10,7 +10,7 @@ namespace Mealio.Data.Entities
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime StartingSunday { get; set; }
+        public DateTime StartDate { get; set; }
         public int LengthInWeeks { get; set; }
         public Guid UserId { get; set; }
 

@@ -17,7 +17,7 @@ namespace Mealio.Services
             _userId = userId;
         }
 
-        //public bool CreateMealIngredient(MealCreate model)
+        //public bool CreateMealIngredient(MealIngredientCreate model)
         //{
 
         //}

@@ -6,7 +6,16 @@ using System.Text;
 
 namespace Mealio.Data.Entities
 {
-    public enum MealType { Breakfast, Lunch, Dinner }
+    public enum MealType
+    { 
+        Breakfast,
+        [Display(Name = "AM Snack")]
+        AmSnack, 
+        Lunch,
+        [Display(Name = "PM Snack")]
+        PmSnack,
+        Dinner
+    }
 
     public class Meal
     {
@@ -17,7 +26,11 @@ namespace Mealio.Data.Entities
         public string CookingInstructions { get; set; }
         [ForeignKey(nameof(MealPlan))]
         public int MealPlanId { get; set; }
-        public int PlanDayIndex { get; set; }
+
+        // int corresponding to day number of plan where first day of plan is 1. 
+        // Ex: value of 6 could be Friday, Week 1 of a plan that starts on a Sunday
+        //     or value of 11 could be Thursday, Week 2 of a plan that starts on a Monday
+        public int PlanDayIndex { get; set; } 
         public Guid UserId { get; set; }
 
         // nav props
