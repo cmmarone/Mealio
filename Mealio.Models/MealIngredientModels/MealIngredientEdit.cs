@@ -7,7 +7,8 @@ namespace Mealio.Models.MealIngredientModels
     public class MealIngredientEdit
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string IngredientName { get; set; }
+        public int Amount { get; set; }
         public string Units { get; set; }
     }
 }

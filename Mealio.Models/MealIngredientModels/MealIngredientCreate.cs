@@ -8,7 +8,9 @@ namespace Mealio.Models.MealIngredientModels
     public class MealIngredientCreate
     {
         [Required]
-        public string Ingredient { get; set; }
+        public string MealName { get; set; }
+        [Required]
+        public string IngredientName { get; set; }
         [Required]
         public int Amount { get; set; }
         [Required]

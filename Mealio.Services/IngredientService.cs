@@ -35,12 +35,11 @@ namespace Mealio.Services
 
         public bool CreateIngredient(MealIngredientCreate model)
         {
-            if (_context.Ingredients.Any(i => i.Name.ToLower() == model.Ingredient.ToLower()))
-                return true;
+            // MealINgredientService checks if Ingredient exists, then sends model over if not
 
             var ingredient = new Ingredient()
             {
-                Name = model.Ingredient,
+                Name = model.IngredientName,
                 Units = model.Units,
                 UserId = _userId
             };
